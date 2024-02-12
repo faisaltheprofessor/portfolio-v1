@@ -7,7 +7,7 @@ const Navbar = () => {
     { id: 4, section: "Contact" },
   ];
   return (
-    <nav className="sticky h-[42] w-full flex items-center justify-between">
+    <nav className="h-[42] w-full flex items-center justify-between stick">
       <a href="#"></a>
       <ul className="hidden md:flex items-center gap-x-8 text-lightest-slate">
         {navItmes.map((item) => (
