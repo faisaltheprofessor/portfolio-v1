@@ -13,6 +13,7 @@ import {
 
 import { motion } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
+import { useState } from "react";
 const Navbar = () => {
   const navItmes = [
     { id: 1, section: "About", link: "#about" },
@@ -20,6 +21,8 @@ const Navbar = () => {
     { id: 3, section: "Work", link: "#work" },
     { id: 4, section: "Contact", link: "#contact" },
   ];
+
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   return (
     <>
@@ -43,9 +46,13 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Sheet>
+        <Sheet open={isMobileNavOpen}>
           <SheetTrigger className="md:hidden">
-            <MenuIcon className="text-green" size={46} />
+            <MenuIcon
+              className="text-green"
+              size={46}
+              onClick={() => setIsMobileNavOpen(true)}
+            />
           </SheetTrigger>
           <SheetContent className="bg-light-navy shadow-md border-none text-white backdrop-blur-md items-center justify-center flex">
             <SheetHeader>
@@ -55,11 +62,10 @@ const Navbar = () => {
                     <li
                       className="flex flex-col  hover:text-green text-base  text-center text-lightest-slate"
                       key={item.id}
+                      onClick={() => setIsMobileNavOpen(false)}
                     >
                       <span className="text-green">0{item.id}. </span>
-                      <SheetClose>
-                        <a href={item.link}>{item.section}</a>
-                      </SheetClose>
+                      <a href={item.link}>{item.section}</a>
                     </li>
                   ))}
 
