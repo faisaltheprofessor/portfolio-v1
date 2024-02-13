@@ -15,7 +15,7 @@ const Header = () => {
         <Navbar />
 
         {/* Left Fixed Div */}
-        <div className="fixed flex flex-col items-center bottom-0 left-12 gap-y-10 text-light-slate">
+        <div className="hidden md:fixed md:flex flex-col items-center bottom-0 left-12 gap-y-10 text-light-slate">
           {profiles.map((profile) => (
             <a
               key={profile.id}
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
 
         {/* Left Fixed Div */}
-        <div className="fixed flex flex-col items-center bottom-2 -right-9  gap-y-20">
+        <div className="hidden md:fixed md:flex flex-col items-center bottom-2 -right-9  gap-y-20">
           <a
             href="#"
             className="text-[13px] rotate-90 text-light-slate hover:text-green hover:-translate-y-1 transition-all tracking-widest"

@@ -7,7 +7,7 @@ interface props {
 const SolidButton = ({ className, children }: props) => {
   return (
     <button
-      className={`${className} border border-green rounded px-4 py-2 text-green hover:border-r-4 hover:border-b-4 transition-all`}
+      className={`${className} border border-green rounded px-14 py-4 text-green`}
     >
       {children}
     </button>

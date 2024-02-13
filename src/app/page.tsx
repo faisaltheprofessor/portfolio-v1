@@ -3,7 +3,7 @@ import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Header from "./components/header";
 import SolidButton from "./components/SolidButton";
 import { motion } from "framer-motion";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 const calibre = localFont({
   src: "fonts/calibre/CalibreMedium.otf",
@@ -39,7 +39,7 @@ const Home = () => {
             >
               I am a Software Engineer.
             </h3>
-            <p className="text-slate tracking-tight w-full md:w-2/3">
+            <p className="text-slate tracking-tight w-2/3">
               I’m a software engineer specializing in building (and occasionally
               designing) exceptional digital experiences. Currently, I’m focused
               on building ecommerce applications at Brainspin.
