@@ -13,30 +13,43 @@ const Home = () => {
     <>
       <Header />
 
-      <main className={`p-20 flex  h-screen  ml-80  mt-32`}>
-        <div
-          className={`flex flex-col items-start gap-y-6  text-white mx-auto h-full tracking-widest`}
-        >
-          <h2 className="text-green">Hi, My name is</h2>
-          <h1
-            className={`${calibre.className} text-7xl text-lightest-slate font-bold`}
+      <main
+        className={`p-20  w-full ml-10 md:w-auto md:ml-40 lg:ml-80 h-screen mx-auto mt-32 transition-all`}
+      >
+        <section className="h-screen flex items-center snap-mandatory">
+          <div
+            className={`flex flex-col items-start gap-y-6  text-white mx-auto h-full tracking-widest`}
           >
-            Faisal Khan.
-          </h1>
-          <h3 className={`${calibre.className} text-7xl text-slate font-bold`}>
-            I build things for the web.
-          </h3>
+            <h2 className="text-green">Hi, My name is</h2>
+            <h1
+              className={`${calibre.className} text-5xl md:text-6xl lg:text-7xl text-lightest-slate font-bold`}
+            >
+              Faisal Khan.
+            </h1>
+            <h3
+              className={`${calibre.className} text-5xl md:text-6xl lg:text-7xl text-slate font-bold`}
+            >
+              I am a Software Engineer.
+            </h3>
+            <p className="text-slate tracking-tight w-full md:w-2/3">
+              I’m a software engineer specializing in building (and occasionally
+              designing) exceptional digital experiences. Currently, I’m focused
+              on building ecommerce applications at Brainspin.
+            </p>
+            <SolidButton className="mt-10 text-[13px] px-6 py-4">
+              Download My CV
+            </SolidButton>
+          </div>
+        </section>
 
-          <p className="text-slate tracking-tight w-1/2">
-            I’m a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused
-            on building ecommerce applications at Brainspin.
+        <section className="h-screen flex items-center snap-mandatory snap-center">
+          <p className="text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eius
+            commodi molestias consectetur? Ut eos suscipit aut, eveniet, quis ad
+            obcaecati dicta in sapiente velit doloribus rerum quaerat dolore
+            recusandae!
           </p>
-
-          <SolidButton className="mt-10 text-[13px] px-6 py-4">
-            Download My CV
-          </SolidButton>
-        </div>
+        </section>
       </main>
     </>
   );
