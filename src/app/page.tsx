@@ -14,11 +14,14 @@ const Home = () => {
       <Header />
 
       <main
-        className={`p-20  w-full ml-10 md:w-auto md:ml-40 lg:ml-80 h-screen mx-auto mt-32 transition-all`}
+        className={`w-full ml-10 md:w-auto md:ml-40 lg:ml-80 h-screen mx-auto transition-all`}
       >
-        <section className="h-screen flex items-center snap-mandatory">
+        <section
+          className="h-screen flex items-center snap-mandatory snap-start"
+          id="about"
+        >
           <div
-            className={`flex flex-col items-start gap-y-6  text-white mx-auto h-full tracking-widest`}
+            className={`flex flex-col items-start gap-y-6  text-white mx-auto  tracking-widest`}
           >
             <h2 className="text-green">Hi, My name is</h2>
             <h1
@@ -37,18 +40,35 @@ const Home = () => {
               on building ecommerce applications at Brainspin.
             </p>
             <SolidButton className="mt-10 text-[13px] px-6 py-4">
-              Download My CV
+              Hire Me
             </SolidButton>
           </div>
         </section>
 
-        <section className="h-screen flex items-center snap-mandatory snap-center">
+        <section
+          className="h-screen flex items-center snap-mandatory snap-center"
+          id="experience"
+        >
           <p className="text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eius
             commodi molestias consectetur? Ut eos suscipit aut, eveniet, quis ad
             obcaecati dicta in sapiente velit doloribus rerum quaerat dolore
             recusandae!
           </p>
+        </section>
+
+        <section
+          className="h-screen flex items-center snap-mandatory snap-center"
+          id="work"
+        >
+          <p className="text-white">My Work</p>
+        </section>
+
+        <section
+          className="h-screen flex items-center snap-mandatory snap-center"
+          id="contact"
+        >
+          <p className="text-white">Contact me</p>
         </section>
       </main>
     </>
