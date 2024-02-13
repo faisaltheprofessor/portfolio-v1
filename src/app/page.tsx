@@ -12,8 +12,7 @@ const calibre = localFont({
 const Home = () => {
   return (
     <>
-      <Header />
-
+      <Header />w
       <main
         className={`w-full ml-10 md:w-auto md:ml-40 lg:ml-80 h-screen mx-auto transition-all`}
       >
