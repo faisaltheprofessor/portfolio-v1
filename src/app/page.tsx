@@ -1,7 +1,8 @@
+"use client";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Header from "./components/header";
 import SolidButton from "./components/SolidButton";
-
+import { motion } from "framer-motion";
 import localFont from "@next/font/local";
 
 const calibre = localFont({
@@ -16,8 +17,12 @@ const Home = () => {
       <main
         className={`w-full ml-10 md:w-auto md:ml-40 lg:ml-80 h-screen mx-auto transition-all`}
       >
-        <section
-          className="h-screen flex items-center snap-mandatory snap-start"
+        <motion.section
+          layout
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="h-screen flex items-center snap-mandatory snap-end"
           id="about"
         >
           <div
@@ -43,7 +48,7 @@ const Home = () => {
               Hire Me
             </SolidButton>
           </div>
-        </section>
+        </motion.section>
 
         <section
           className="h-screen flex items-center snap-mandatory snap-center"

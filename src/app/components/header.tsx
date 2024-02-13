@@ -1,6 +1,7 @@
+"use client";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import Navbar from "./navbar";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const profiles = [
     { id: 1, name: "github", icon: Github, link: "" },
@@ -10,7 +11,7 @@ const Header = () => {
   ];
   return (
     <>
-      <header className="relative flex items-center text-lightest-slate px-[50px] w-full">
+      <motion.header className="relative flex items-center text-lightest-slate px-[50px] w-full">
         <Navbar />
 
         {/* Left Fixed Div */}
@@ -39,7 +40,7 @@ const Header = () => {
           {/* Border */}
           <div className="h-20 w-[1px] bg-light-slate mt-10"></div>
         </div>
-      </header>
+      </motion.header>
     </>
   );
 };
