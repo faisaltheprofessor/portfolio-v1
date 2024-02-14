@@ -6,8 +6,8 @@ const Header = () => {
   const profiles = [
     { id: 1, name: "github", icon: Github, link: "" },
     { id: 2, name: "linkedin", icon: Linkedin, link: "" },
-    { id: 2, name: "twitter", icon: Twitter, link: "" },
-    { id: 2, name: "instagram", icon: Instagram, link: "" },
+    { id: 3, name: "twitter", icon: Twitter, link: "" },
+    { id: 4, name: "instagram", icon: Instagram, link: "" },
   ];
   return (
     <>

@@ -29,7 +29,13 @@ const Navbar = () => {
       <motion.nav className="w-full flex items-center  md:justify-between z-50">
         <div className="w-full flex justify-between items-center">
           <a href="/">
-            <Image src={logo} alt="logo" height={80} className="z-50" />
+            <Image
+              src={logo}
+              alt="logo"
+              height={80}
+              className="z-50"
+              priority={true}
+            />
           </a>
         </div>
 
@@ -55,26 +61,29 @@ const Navbar = () => {
             />
           </SheetTrigger>
           <SheetContent className="bg-light-navy shadow-md border-none text-white backdrop-blur-md items-center justify-center flex">
-            <SheetHeader>
-              <SheetDescription>
-                <ul className="flex flex-col gap-y-10 items-center gap-x-8 text-light-slate">
-                  {navItmes.map((item) => (
-                    <li
-                      className="flex flex-col  hover:text-green text-base  text-center text-lightest-slate"
-                      key={item.id}
-                      onClick={() => setIsMobileNavOpen(false)}
-                    >
-                      <span className="text-green">0{item.id}. </span>
-                      <a href={item.link}>{item.section}</a>
-                    </li>
-                  ))}
+            <div
+              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary hover:cursor-pointer"
+              onClick={() => setIsMobileNavOpen(false)}
+            >
+              <X size={46} className="text-green" />
+              <span className="sr-only">Close</span>
+            </div>
+            <ul className="flex flex-col gap-y-10 items-center gap-x-8 text-light-slate">
+              {navItmes.map((item) => (
+                <li
+                  className="flex flex-col  hover:text-green text-base  text-center text-lightest-slate"
+                  key={item.id}
+                  onClick={(e) => setIsMobileNavOpen(false)}
+                >
+                  <span className="text-green">0{item.id}. </span>
+                  <a href={item.link}>{item.section}</a>
+                </li>
+              ))}
 
-                  <li>
-                    <SolidButton>Resume</SolidButton>
-                  </li>
-                </ul>
-              </SheetDescription>
-            </SheetHeader>
+              <li>
+                <SolidButton>Resume</SolidButton>
+              </li>
+            </ul>
           </SheetContent>
         </Sheet>
       </motion.nav>
