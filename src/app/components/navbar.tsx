@@ -46,7 +46,9 @@ const Navbar = () => {
           ))}
 
           <li>
-            <SolidButton className="px-4 py-3">Resume</SolidButton>
+            <SolidButton className={cn("px-4 py-3", SFMono.className)}>
+              Resume
+            </SolidButton>
           </li>
         </ul>
 
@@ -79,7 +81,9 @@ const Navbar = () => {
               ))}
 
               <li>
-                <SolidButton>Resume</SolidButton>
+                <SolidButton className={cn("", SFMono.className)}>
+                  Resume
+                </SolidButton>
               </li>
             </ul>
           </SheetContent>
