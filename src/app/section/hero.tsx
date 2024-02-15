@@ -26,7 +26,7 @@ const Hero = () => {
           I am a Software Engineer.
         </h3>
         <p className="text-slate tracking-tight w-full md:w-2/3">
-          I love building web applications! Currently, I'm focused on creating
+          I love building web applications! Currently, I am focused on creating
           user-friendly tools using Laravel and Next.js.
         </p>
         <SolidButton className="mt-10 text-[13px] px-6 py-4">
