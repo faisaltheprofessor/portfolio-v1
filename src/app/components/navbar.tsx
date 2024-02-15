@@ -2,18 +2,13 @@
 import SolidButton from "./SolidButton";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import { motion } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { SFMono } from "../fonts/fonts";
 const Navbar = () => {
   const navItmes = [
     { id: 1, section: "About", link: "#about" },
@@ -41,7 +36,10 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-x-8 text-light-slate">
           {navItmes.map((item) => (
-            <li className="hover:text-green flex" key={item.id}>
+            <li
+              className={cn("hover:text-green flex", SFMono.className)}
+              key={item.id}
+            >
               <span className="text-green">0{item.id}. </span>
               <a href={item.link}>{item.section}</a>
             </li>
