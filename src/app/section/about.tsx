@@ -43,7 +43,7 @@ const About = () => {
 
         <div className="relative flex  w-[256px] h-[256px]">
           <Image
-            src="/faisal.webp"
+            src="/faisal.jpeg"
             alt=""
             height={400}
             width={400}
