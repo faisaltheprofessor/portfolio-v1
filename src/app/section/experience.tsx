@@ -66,7 +66,7 @@ const Experience = () => {
   return (
     <>
       <motion.section
-        className="min-h-screen flex flex-col mx-auto my-auto mt-20 md:mt-10 transition-all  justify-center lg:w-[50%]"
+        className="min-h-screen flex flex-col mx-auto my-auto mt-20 md:mt-10 transition-all  justify-center lg:w-[50%] overflow-scroll"
         id="about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
