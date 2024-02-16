@@ -9,12 +9,13 @@ import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { SFMono } from "../fonts/fonts";
+import Link from "next/link";
 const Navbar = () => {
   const navItmes = [
-    { id: 1, section: "About", link: "#about" },
-    { id: 2, section: "Experience", link: "#experience" },
-    { id: 3, section: "Work", link: "#work" },
-    { id: 4, section: "Contact", link: "#contact" },
+    { id: 1, section: "About", link: "/about" },
+    { id: 2, section: "Experience", link: "/experience" },
+    { id: 3, section: "Work", link: "/work" },
+    { id: 4, section: "Contact", link: "/contact" },
   ];
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
     <>
       <motion.nav className="w-full h-10 md:px-10 flex items-center md:justify-between">
         <div className="w-full flex justify-between items-center">
-          <a href="/">
+          <Link href="/">
             <Image
               src={logo}
               alt="logo"
@@ -31,7 +32,7 @@ const Navbar = () => {
               className="z-50"
               priority={true}
             />
-          </a>
+          </Link>
         </div>
       </motion.nav>
 
@@ -42,7 +43,7 @@ const Navbar = () => {
             key={item.id}
           >
             <span className="text-green">0{item.id}. </span>
-            <a href={item.link}>{item.section}</a>
+            <Link href={item.link}>{item.section}</Link>
           </li>
         ))}
 

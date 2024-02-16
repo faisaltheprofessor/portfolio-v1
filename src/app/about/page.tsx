@@ -1,7 +1,6 @@
 "use client";
-import Header from "./components/header";
-import About from "./section/about";
-import Hero from "./section/hero";
+import Header from "../components/header";
+import About from "../section/about";
 
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
       <Header />
 
       <main className="overflow-scroll w-full ml-10">
-        <Hero />
+        <About />
       </main>
     </>
   );

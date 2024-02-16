@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SFMono } from "./fonts/fonts";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Faisal Khan",
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-navy">
-      <body className={SFMono.className}>{children}</body>
+    <html lang="en" className="bg-navy overflow-hidden">
+      <body className={cn("h-screen overflow-hidden", SFMono.className)}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -11,7 +11,7 @@ const Header = () => {
   ];
   return (
     <>
-      <motion.header className="relative flex items-center text-lightest-slate px-[50px] w-full">
+      <motion.header className="relative h-[80px] flex items-center text-lightest-slate px-[50px] w-full">
         <Navbar />
 
         {/* Left Fixed Div */}
