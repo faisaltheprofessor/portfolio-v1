@@ -16,7 +16,7 @@ const About = () => {
   ];
   return (
     <motion.section
-      className="h-screen flex flex-col mx-auto  justify-center lg:w-[80%]"
+      className="min-h-screen flex flex-col mx-auto  justify-center lg:w-[80%]"
       id="about"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

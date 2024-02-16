@@ -8,11 +8,11 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="h-screen flex items-center  snap-center"
+      className="min-h-screen flex items-center snap-center"
       id="#"
     >
       <div
-        className={`flex flex-col items-start gap-y-6  text-white mx-auto   -mt-20 font-medium`}
+        className={`flex flex-col items-start gap-y-6  text-white mx-auto -mt-20 font-medium md:px-20`}
       >
         <h2 className="text-green">Hi, My name is</h2>
         <h1
@@ -21,11 +21,11 @@ const Hero = () => {
           Faisal Khan.
         </h1>
         <h3
-          className={`${Calibre.className} text-5xl md:text-6xl lg:text-7xl text-slate font-medium tracking-tight`}
+          className={`${Calibre.className} text-4xl md:text-6xl lg:text-7xl text-slate font-medium tracking-tight`}
         >
           I am a Software Engineer.
         </h3>
-        <p className="text-slate tracking-tight w-full md:w-2/3">
+        <p className="text-slate tracking-tight w-2/3">
           I love building web applications! Currently, I am focused on creating
           user-friendly tools using Laravel and Next.js.
         </p>
