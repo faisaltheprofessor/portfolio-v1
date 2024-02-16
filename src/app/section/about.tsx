@@ -40,8 +40,8 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            Hi, I'm <span className="text-green"> Faisal</span>, and I thrive on
-            the art of web development. It all began in{" "}
+            Hi, I am <span className="text-green"> Faisal</span>, and I thrive
+            on the art of web development. It all began in{" "}
             <span className="text-green"> 2015</span> when I decided to create a
             <span className="text-green"> website</span> dedicated to my
             <span className="text-green"> university library</span>. Along the
