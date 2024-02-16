@@ -14,10 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-navy overflow-hidden">
-      <body className={cn("h-screen overflow-hidden", SFMono.className)}>
-        {children}
-      </body>
+    <html lang="en" className="bg-navy ">
+      <body className={cn("h-screen", SFMono.className)}>{children}</body>
     </html>
   );
 }
