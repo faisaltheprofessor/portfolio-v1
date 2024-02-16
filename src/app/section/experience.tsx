@@ -1,6 +1,7 @@
 "use client";
 import Heading from "@/components/heading";
 import { cn } from "@/lib/utils";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import { motion } from "framer-motion";
 
@@ -72,49 +73,51 @@ const Experience = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <Heading text="Where I have worked" number={2} />
+        <ScrollArea>
+          <Heading text="Where I have worked" number={2} />
 
-        <div className="flex flex-col md:flex-row  mt-10 transition-all gap-5 pr-20">
-          <div>
-            <ul className="transition-all flex md:flex-col">
-              {tabs.map((tab) => (
-                <li
-                  className={cn(
-                    "hover:bg-light-navy text-slate hover:text-green transition-all  px-6 hover:cursor-pointer py-2 border-t-2 md:border-t-0 md:border-l-2  border-light-navy",
-                    {
-                      "border-t-green md:border-l-green bg-light-navy text-green":
-                        selectedTab === tab.id,
-                    }
-                  )}
-                  key={tab.id}
-                  onClick={() => setSelectedTab(tab.id)}
-                >
-                  {tab.name}
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col md:flex-row  mt-10 transition-all gap-5 pr-20">
+            <div>
+              <ul className="transition-all flex md:flex-col">
+                {tabs.map((tab) => (
+                  <li
+                    className={cn(
+                      "hover:bg-light-navy text-slate hover:text-green transition-all  px-6 hover:cursor-pointer py-2 border-t-2 md:border-t-0 md:border-l-2  border-light-navy",
+                      {
+                        "border-t-green md:border-l-green bg-light-navy text-green":
+                          selectedTab === tab.id,
+                      }
+                    )}
+                    key={tab.id}
+                    onClick={() => setSelectedTab(tab.id)}
+                  >
+                    {tab.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <motion.div
+              key={selectedTab}
+              className="text-slate h-screen md:h-36"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              <h1 className="text-2xl text-light-slate">
+                {experience?.position}
+              </h1>
+              <h2 className="text-sm">{experience?.dates}</h2>
+              <ul className="mt-2 flex flex-col gap-y-2">
+                {experience?.description.map((description) => (
+                  <li className="text-xs" key={Math.random()}>
+                    <span className="text-green">▹ </span>
+                    {description}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
-          <motion.div
-            key={selectedTab}
-            className="text-slate h-screen md:h-36"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <h1 className="text-2xl text-light-slate">
-              {experience?.position}
-            </h1>
-            <h2 className="text-sm">{experience?.dates}</h2>
-            <ul className="mt-2 flex flex-col gap-y-2">
-              {experience?.description.map((description) => (
-                <li className="text-xs" key={Math.random()}>
-                  <span className="text-green">▹ </span>
-                  {description}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
+        </ScrollArea>
       </motion.section>
     </>
   );
