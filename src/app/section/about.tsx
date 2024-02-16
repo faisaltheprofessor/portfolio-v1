@@ -73,7 +73,7 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.5 }}
           >
-            In my recent work, I've had the opportunity to work with followin
+            In my recent work, I have had the opportunity to work with followin
             technologies:
           </motion.p>
 
