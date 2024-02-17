@@ -18,7 +18,7 @@ const About = () => {
   return (
     <ScrollArea>
       <motion.section
-        className="min-h-screen flex flex-col mx-auto  justify-center lg:w-[80%]"
+        className="flex flex-col mx-auto  px-auto md:w-full"
         id="about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -28,7 +28,7 @@ const About = () => {
 
         <motion.div
           className={cn(
-            "flex mt-10 gap-x-5 flex-col lg:flex-row items-center w-[80%]",
+            "flex mt-10 gap-x-5 gap-y-10 flex-col-reverse lg:flex-row  w-[80%] ",
             Calibre.className
           )}
           initial={{ opacity: 0 }}
@@ -96,17 +96,17 @@ const About = () => {
           </div>
 
           <motion.div
-            className="relative flex  w-[256px] h-[256px]"
+            className="relative flex h-52 w-52 aspect-square mx-auto"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 3.5 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <Image
               src="/faisal.jpeg"
               alt=""
               height={400}
               width={400}
-              className={cn("absolute z-100 rounded h-full transition-all", {
+              className={cn("absolute z-100 rounded transition-all", {
                 "-translate-x-1 -translate-y-1": hoverOnImage,
               })}
               onMouseLeave={() => setHoverOnImage(false)}

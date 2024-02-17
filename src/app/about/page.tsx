@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <Header />
 
-      <main className="overflow-scroll w-full ml-10">
+      <main className="flex items-center justify-center md:w-full  xl:w-[50%] h-screen mx-auto overflow-auto">
         <About />
       </main>
     </>
