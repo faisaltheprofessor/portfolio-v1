@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav className="w-full h-full flex items-center justify-center md:justify-between">
+      <motion.nav className="w-full h-full flex justify-start md:items-center md:justify-between px-4">
         <Link href="/">
           <Image
             src={logo}
@@ -44,14 +44,19 @@ const Navbar = () => {
           ))}
           <div className="w-32  h-full flex items-center">
             <SolidButton className={cn("px-6 py-2  ml-2", SFMono.className)}>
-              Resume
+              <a
+                href="https://v1.iamfaisal.de/documents/faisal.pdf"
+                target="_blank"
+              >
+                Resume
+              </a>
             </SolidButton>
           </div>
         </ul>
       </motion.nav>
 
       <Sheet open={isMobileNavOpen}>
-        <SheetTrigger className="md:hidden">
+        <SheetTrigger className="md:hidden pr-4">
           <MenuIcon
             className="text-green"
             size={46}

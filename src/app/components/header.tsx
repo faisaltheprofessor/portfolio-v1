@@ -1,13 +1,27 @@
 "use client";
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import Navbar from "./navbar";
 import { motion } from "framer-motion";
 const Header = () => {
   const profiles = [
-    { id: 1, name: "github", icon: Github, link: "" },
-    { id: 2, name: "linkedin", icon: Linkedin, link: "" },
-    { id: 3, name: "twitter", icon: Twitter, link: "" },
-    { id: 4, name: "instagram", icon: Instagram, link: "" },
+    {
+      id: 1,
+      name: "github",
+      icon: Github,
+      link: "https://github.com/faisaltheprofessor",
+    },
+    {
+      id: 2,
+      name: "linkedin",
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/realfaisalkhan/",
+    },
+    {
+      id: 3,
+      name: "twitter",
+      icon: Twitter,
+      link: "https://twitter.com/faisalfazily",
+    },
   ];
   return (
     <>
@@ -20,6 +34,7 @@ const Header = () => {
             <a
               key={profile.id}
               href={profile.link}
+              target="_blank"
               className="hover:text-green hover:-translate-y-1 transition-all"
             >
               <profile.icon size={23} />
@@ -32,7 +47,7 @@ const Header = () => {
         {/* Left Fixed Div */}
         <div className="hidden md:fixed md:flex flex-col items-center bottom-2 -right-9  gap-y-20">
           <a
-            href="#"
+            href="mailto:faisal@berlin.de"
             className="text-[13px] rotate-90 text-light-slate hover:text-green hover:-translate-y-1 transition-all tracking-widest"
           >
             faisal@berlin.de
