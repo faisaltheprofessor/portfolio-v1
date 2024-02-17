@@ -13,7 +13,7 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="min-h-screen flex items-center snap-center"
+      className="min-h-screen flex items-center snap-center -mt-20 md:mt-0"
       id="#"
     >
       <div

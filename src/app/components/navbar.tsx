@@ -83,8 +83,8 @@ const Navbar = () => {
               </li>
             ))}
 
-            <li>
-              <SolidButton className={cn("", SFMono.className)}>
+            <li className="h-40">
+              <SolidButton className={cn("px-6 py-2", SFMono.className)}>
                 Resume
               </SolidButton>
             </li>
