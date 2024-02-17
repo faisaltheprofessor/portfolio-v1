@@ -8,10 +8,10 @@ interface Props {
 
 const Heading = ({ text, number = 1 }: Props) => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center w-[80%]">
       <h1
         className={cn(
-          "text-3xl text-lightest-slate leading-[35px] after:content-[''] after:w-5 after:bg-gray-100",
+          "text-3xl whitespace-nowrap  text-lightest-slate leading-[35px] after:content-[''] after:w-5 after:bg-gray-100",
           Calibre.className
         )}
       >

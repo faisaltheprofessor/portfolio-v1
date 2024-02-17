@@ -2,10 +2,9 @@
 import Heading from "@/components/heading";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import { motion } from "framer-motion";
 
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 
 const Experience = () => {
   let tabs = [
@@ -67,7 +66,7 @@ const Experience = () => {
   return (
     <>
       <motion.section
-        className="min-h-screen flex flex-col mx-auto my-auto mt-20 md:mt-10 transition-all  justify-center lg:w-[50%] overflow-scroll"
+        className="flex flex-col mx-auto  items-center px-auto w-[80%]"
         id="about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -76,7 +75,7 @@ const Experience = () => {
         <ScrollArea>
           <Heading text="Where I have worked" number={2} />
 
-          <div className="flex flex-col md:flex-row  mt-10 transition-all gap-5 pr-20">
+          <div className="flex flex-col md:flex-row  mt-10 transition-all gap-5 pr-20  mx-auto">
             <div>
               <ul className="transition-all flex md:flex-col">
                 {tabs.map((tab) => (

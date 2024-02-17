@@ -18,7 +18,7 @@ const About = () => {
   return (
     <ScrollArea>
       <motion.section
-        className="flex flex-col mx-auto  px-auto md:w-full"
+        className="flex flex-col mx-auto  items-center px-auto md:w-full"
         id="about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

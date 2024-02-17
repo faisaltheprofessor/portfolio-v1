@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import SolidButton from "../components/SolidButton";
 import { Calibre } from "../fonts/fonts";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -29,9 +30,13 @@ const Hero = () => {
           I love building web applications! Currently, I am focused on creating
           user-friendly tools using Laravel and Next.js.
         </p>
-        <SolidButton className="mt-10 text-[13px] px-6 py-4">
-          Hire Me
-        </SolidButton>
+        <div className="h-20 w-auto">
+          <SolidButton className="mt-10 text-[13px] px-6 py-6 hover:border-b-8 hover:border-r-8 border-green transition-all hover:-translate-x-6 box-border">
+            <a href="https://iamfaisal.de" target="_blank">
+              Previous website version
+            </a>
+          </SolidButton>
+        </div>
       </div>
     </motion.section>
   );

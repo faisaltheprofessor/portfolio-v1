@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <Header />
 
-      <main className="flex items-center justify-center md:w-full  xl:w-[50%] h-screen mx-auto overflow-auto">
+      <main className="flex items-start mt-40 justify-center md:w-full  xl:w-[50%] h-screen mx-auto overflow-auto">
         <About />
       </main>
     </>
