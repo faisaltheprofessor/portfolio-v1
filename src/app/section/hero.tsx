@@ -7,7 +7,7 @@ import { useState } from "react";
 const Hero = () => {
   const [showDevelopmentText, setShowDevelopmentText] = useState(true);
 
-  setTimeout(() => setShowDevelopmentText(false), 3000);
+  // setTimeout(() => setShowDevelopmentText(false), 3000);
   return (
     <motion.section
       initial={{ opacity: 0 }}
