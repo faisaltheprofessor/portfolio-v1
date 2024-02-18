@@ -90,7 +90,12 @@ const Navbar = () => {
 
             <li className="h-40">
               <SolidButton className={cn("px-6 py-2", SFMono.className)}>
-                Resume
+                <a
+                  href="https://v1.iamfaisal.de/documents/faisal.pdf"
+                  target="_blank"
+                >
+                  Resume
+                </a>
               </SolidButton>
             </li>
           </ul>

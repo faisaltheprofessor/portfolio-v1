@@ -3,6 +3,7 @@ import SolidButton from "../components/SolidButton";
 import { Calibre } from "../fonts/fonts";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 const Hero = () => {
   const [showDevelopmentText, setShowDevelopmentText] = useState(true);
@@ -43,22 +44,14 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className={cn(
-                    "text-[#e67e22] bg-light-navy p-2 text-[13px] text-center rounded flex gap-x-4 flex-wrap"
+                    "text-[#e67e22] bg-light-navy p-2 text-[13px] text-center rounded flex gap-x-1 gap-y-1 flex-wrap"
                   )}
                 >
-                  Still in development:{" "}
-                  <span className="bg-slate rounded p-1 text-navy text-[10px]">
-                    Next JS
-                  </span>{" "}
-                  <span className="bg-slate rounded p-1 text-navy text-[10px]">
-                    Tailwind CSS
-                  </span>{" "}
-                  <span className="bg-slate rounded p-1 text-navy text-[10px]">
-                    Framer Motion
-                  </span>{" "}
-                  <span className="bg-slate rounded p-1 text-navy text-[10px]">
-                    Shadcn/UI
-                  </span>{" "}
+                  Still in development using:
+                  <Badge>Next JS</Badge>
+                  <Badge>Tailwind CSS</Badge>
+                  <Badge>Framer Motion</Badge>
+                  <Badge>Shadcn/ui</Badge>
                 </motion.p>
               )}
             </AnimatePresence>
