@@ -79,7 +79,12 @@ const Navbar = () => {
           <ul className="flex flex-col gap-y-10 items-center gap-x-8 text-light-slate">
             {navItmes.map((item) => (
               <li
-                className="flex flex-col  hover:text-green text-base  text-center text-lightest-slate"
+                className={cn(
+                  "flex flex-col  hover:text-green text-base  text-center text-lightest-slate",
+                  {
+                    "text-green": item.link === pathname,
+                  }
+                )}
                 key={item.id}
                 onClick={(e) => setIsMobileNavOpen(false)}
               >
