@@ -12,6 +12,8 @@ export const viewport: Viewport = {
 import { SFMono } from "./fonts/fonts";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Faisal Khan",
@@ -25,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-navy ">
-      <body className={cn("h-screen", SFMono.className)}>{children}</body>
+      <Suspense fallback={<Loading />}>
+        <body className={cn("h-screen", SFMono.className)}>{children}</body>
+      </Suspense>
     </html>
   );
 }
