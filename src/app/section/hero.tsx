@@ -64,7 +64,7 @@ const Hero = () => {
             </AnimatePresence>
           </div>
 
-          <SolidButton className="mt-10 text-[13px] px-6 py-6 hover:border-b-8 hover:border-r-8 border-green transition-all hover:-translate-x-6 box-border">
+          <SolidButton className="mt-10 text-[13px] px-6 py-6 md:hover:border-b-8 md:hover:border-r-8 border-green transition-all md:hover:-translate-x-6  hover:-border-b-4 hover:-border-r-4 hover:translate-x-1 hover:translate-y-1">
             <a href="https://v1.iamfaisal.de" target="_blank">
               See Previous Version
             </a>
