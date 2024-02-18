@@ -44,7 +44,7 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className={cn(
-                    "text-[#e67e22] bg-light-navy p-2 text-[11px] text-center rounded flex gap-x-1 gap-y-1 flex-wrap"
+                    "text-[#e67e22] bg-light-navy p-2 text-[11px] text-center rounded flex gap-x-1 gap-y-1 flex-wrap w-[80%]"
                   )}
                 >
                   The website is currently being developed with:

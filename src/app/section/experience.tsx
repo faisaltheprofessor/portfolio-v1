@@ -1,7 +1,6 @@
 "use client";
 import Heading from "@/components/heading";
 import { cn } from "@/lib/utils";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
 
 import React, { useState } from "react";
@@ -74,7 +73,12 @@ const Experience = () => {
       >
         <Heading text="Where I have worked" number={2} />
 
-        <div className="flex flex-col md:flex-row mt-10 transition-all gap-5 pr-20  mx-auto">
+        <motion.div
+          className="flex flex-col md:flex-row mt-10 transition-all gap-5 pr-20  mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.8 }}
+        >
           <div className="w-60">
             <ul className="transition-all flex md:flex-col ">
               {tabs.map((tab) => (
@@ -114,7 +118,7 @@ const Experience = () => {
               ))}
             </ul>
           </motion.div>
-        </div>
+        </motion.div>
       </motion.section>
     </>
   );

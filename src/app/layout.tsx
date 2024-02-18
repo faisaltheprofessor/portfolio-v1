@@ -14,6 +14,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Footer from "./components/footer";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: "Faisal Khan",
@@ -28,7 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-navy ">
       <Suspense fallback={<Loading />}>
-        <body className={cn("h-screen", SFMono.className)}>{children}</body>
+        <body className={cn("h-screen", SFMono.className)}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
       </Suspense>
     </html>
   );

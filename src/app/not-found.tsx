@@ -4,8 +4,6 @@ import { Calibre } from "./fonts/fonts";
 const NotFound = () => {
   return (
     <>
-      <Header />
-
       <div className="h-screen flex items-center justify-center">
         <h1
           className={`${Calibre.className} text-5xl md:text-6xl lg:text-2xl text-light-slate tracking-wider`}

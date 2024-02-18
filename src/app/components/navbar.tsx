@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav className="w-full h-full flex justify-start md:items-center md:justify-between px-4">
+      <motion.nav className="w-full fixed md:relative  flex justify-start md:items-center md:justify-between px-4 right-0 left-0 z-30 bg-navy/40 backdrop-blur-sm">
         <Link href="/">
           <Image
             src={logo}
@@ -61,7 +61,7 @@ const Navbar = () => {
       </motion.nav>
 
       <Sheet open={isMobileNavOpen}>
-        <SheetTrigger className="md:hidden pr-4">
+        <SheetTrigger className="md:hidden pr-4 right-0 fixed z-40">
           <MenuIcon
             className="text-green"
             size={46}
