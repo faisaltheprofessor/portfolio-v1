@@ -44,14 +44,14 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className={cn(
-                    "text-[#e67e22] bg-light-navy p-2 text-[13px] text-center rounded flex gap-x-1 gap-y-1 flex-wrap"
+                    "text-[#e67e22] bg-light-navy p-2 text-[11px] text-center rounded flex gap-x-1 gap-y-1 flex-wrap"
                   )}
                 >
-                  Still in development using:
-                  <Badge>Next JS</Badge>
-                  <Badge>Tailwind CSS</Badge>
-                  <Badge>Framer Motion</Badge>
-                  <Badge>Shadcn/ui</Badge>
+                  The website is currently being developed with:
+                  <Badge className="text-[9px]">Next JS</Badge>
+                  <Badge className="text-[9px]">Tailwind CSS</Badge>
+                  <Badge className="text-[9px]">Framer Motion</Badge>
+                  <Badge className="text-[9px]">Shadcn/ui</Badge>
                 </motion.p>
               )}
             </AnimatePresence>
