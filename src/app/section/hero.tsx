@@ -36,7 +36,7 @@ const Hero = () => {
           user-friendly tools using Laravel and Next.js.
         </p>
         <div className="h-20 w-auto">
-          <div className="h-10">
+          <div className="h-13">
             <AnimatePresence>
               {showDevelopmentText && (
                 <motion.p
