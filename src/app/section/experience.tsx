@@ -80,11 +80,11 @@ const Experience = () => {
           transition={{ duration: 1.5, delay: 0.8 }}
         >
           <div className="w-60">
-            <ul className="transition-all flex md:flex-col ">
+            <ul className="transition-all flex md:flex-col transition:all">
               {tabs.map((tab) => (
                 <li
                   className={cn(
-                    "hover:bg-light-navy text-slate hover:text-green transition-all  px-6 hover:cursor-pointer py-2 border-t-2 md:border-t-0 md:border-l-2  border-light-navy",
+                    "hover:bg-light-navy text-slate hover:text-green transition-all  px-6 hover:cursor-pointer py-5 border-t-2 md:border-t-0 md:border-l-2  border-light-navy text-base",
                     {
                       "border-t-green md:border-l-green bg-light-navy text-green":
                         selectedTab === tab.id,
@@ -108,11 +108,11 @@ const Experience = () => {
             <h1 className="text-2xl text-light-slate">
               {experience?.position}
             </h1>
-            <h2 className="text-sm">{experience?.dates}</h2>
+            <h2 className="text-base m-3  ml-0">{experience?.dates}</h2>
             <ul className="mt-2 flex flex-col gap-y-2">
               {experience?.description.map((description) => (
-                <li className="text-xs" key={Math.random()}>
-                  <span className="text-green">▹ </span>
+                <li className="text-base" key={Math.random()}>
+                  <span className="text-green text-2xl">▹ </span>
                   {description}
                 </li>
               ))}
