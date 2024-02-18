@@ -75,8 +75,8 @@ const Experience = () => {
         <Heading text="Where I have worked" number={2} />
 
         <div className="flex flex-col md:flex-row mt-10 transition-all gap-5 pr-20  mx-auto">
-          <div>
-            <ul className="transition-all flex md:flex-col">
+          <div className="w-60">
+            <ul className="transition-all flex md:flex-col ">
               {tabs.map((tab) => (
                 <li
                   className={cn(
