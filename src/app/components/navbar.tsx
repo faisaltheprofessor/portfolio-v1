@@ -10,6 +10,8 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { SFMono } from "../fonts/fonts";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const Navbar = () => {
   const navItmes = [
     { id: 1, section: "About", link: "/about" },
@@ -19,6 +21,7 @@ const Navbar = () => {
   ];
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -35,7 +38,9 @@ const Navbar = () => {
         <ul className="hidden md:flex items-center justify-center gap-x-8 text-light-slate">
           {navItmes.map((item) => (
             <li
-              className={cn("hover:text-green flex", SFMono.className)}
+              className={cn("hover:text-green flex", SFMono.className, {
+                "text-green": item.link === pathname,
+              })}
               key={item.id}
             >
               <span className="text-green">0{item.id}. </span>
