@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const Hero = () => {
-  const [showDevelopmentText, setShowDevelopmentText] = useState(true);
+  const [showDevelopmentText, setShowDevelopmentText] = useState(false);
 
   // setTimeout(() => setShowDevelopmentText(false), 3000);
   return (
