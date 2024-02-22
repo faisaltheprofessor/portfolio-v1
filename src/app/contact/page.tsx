@@ -29,8 +29,8 @@ const Contact = () => {
         transition={{ duration: 1, delay: 0.4 }}
       >
         I&apos;d love to hear from you! Whether you have a project in mind, a
-        question, or just want to say hello, feel free to reach out to me using
-        the contact form below. I look forward to connecting with you!
+        question, or just want to say hello, feel free to reach out to me by the
+        button below. I look forward to connecting with you!
       </motion.p>
 
       <motion.a
