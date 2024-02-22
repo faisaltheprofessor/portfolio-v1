@@ -28,7 +28,7 @@ const Contact = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        I'd love to hear from you! Whether you have a project in mind, a
+        I&apos;d love to hear from you! Whether you have a project in mind, a
         question, or just want to say hello, feel free to reach out to me using
         the contact form below. I look forward to connecting with you!
       </motion.p>
