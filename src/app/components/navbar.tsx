@@ -27,19 +27,13 @@ const Navbar = () => {
     <>
       <motion.nav className="w-full fixed md:relative  flex justify-start md:items-center md:justify-between px-4 right-0 left-0 z-30 bg-navy/40 backdrop-blur-sm">
         <Link href="/">
-          <motion.div
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Image
-              src={logo}
-              alt="logo"
-              height={80}
-              className="z-50"
-              priority={true}
-            />
-          </motion.div>
+          <Image
+            src={logo}
+            alt="logo"
+            height={80}
+            className="z-50"
+            priority={true}
+          />
         </Link>
         <ul className="hidden md:flex items-center justify-center gap-x-8 text-light-slate">
           {navItmes.map((item) => (
