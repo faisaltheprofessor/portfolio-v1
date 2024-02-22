@@ -4,7 +4,7 @@ import logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -14,10 +14,10 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const navItmes = [
-    { id: 1, section: "About", link: "/about" },
-    { id: 2, section: "Experience", link: "/experience" },
-    { id: 3, section: "Work", link: "/work" },
-    { id: 4, section: "Contact", link: "/contact" },
+    { id: 1, section: "About", link: "/about", delay: 0.1 },
+    { id: 2, section: "Experience", link: "/experience", delay: 0.2 },
+    { id: 3, section: "Work", link: "/work", delay: 0.3 },
+    { id: 4, section: "Contact", link: "/contact", delay: 0.4 },
   ];
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -27,27 +27,41 @@ const Navbar = () => {
     <>
       <motion.nav className="w-full fixed md:relative  flex justify-start md:items-center md:justify-between px-4 right-0 left-0 z-30 bg-navy/40 backdrop-blur-sm">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="logo"
-            height={80}
-            className="z-50"
-            priority={true}
-          />
+          <motion.div
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Image
+              src={logo}
+              alt="logo"
+              height={80}
+              className="z-50"
+              priority={true}
+            />
+          </motion.div>
         </Link>
         <ul className="hidden md:flex items-center justify-center gap-x-8 text-light-slate">
           {navItmes.map((item) => (
-            <li
+            <motion.li
               className={cn("hover:text-green flex", SFMono.className, {
                 "text-green": item.link === pathname,
               })}
               key={item.id}
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, delay: item.delay }}
             >
               <span className="text-green">0{item.id}. </span>
               <Link href={item.link}>{item.section}</Link>
-            </li>
+            </motion.li>
           ))}
-          <div className="w-32  h-full flex items-center">
+          <motion.div
+            className="w-32  h-full flex items-center"
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             <SolidButton className={cn("px-6 py-2  ml-2", SFMono.className)}>
               <a
                 href="https://v1.iamfaisal.de/documents/faisal.pdf"
@@ -56,7 +70,7 @@ const Navbar = () => {
                 Resume
               </a>
             </SolidButton>
-          </div>
+          </motion.div>
         </ul>
       </motion.nav>
 
