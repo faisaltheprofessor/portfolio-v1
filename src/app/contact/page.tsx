@@ -23,7 +23,7 @@ const Contact = () => {
       </motion.h1>
 
       <motion.p
-        className="text-slate w-1/2 mx-auto"
+        className="text-slate w-2/3 md:w-1/2 mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
