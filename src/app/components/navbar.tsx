@@ -4,7 +4,7 @@ import logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -58,6 +58,7 @@ const Navbar = () => {
           >
             <SolidButton className={cn("px-6 py-2  ml-2", SFMono.className)}>
               <a
+                rel="noopener"
                 href="https://v1.iamfaisal.de/documents/faisal.pdf"
                 target="_blank"
               >
@@ -69,7 +70,10 @@ const Navbar = () => {
       </motion.nav>
 
       <Sheet open={isMobileNavOpen}>
-        <SheetTrigger className="md:hidden pr-4 right-0 fixed z-40">
+        <SheetTrigger
+          className="md:hidden pr-4 right-0 fixed z-40"
+          aria-label="Open Mobile Menu"
+        >
           <MenuIcon
             className="text-green"
             size={46}
@@ -102,14 +106,15 @@ const Navbar = () => {
             ))}
 
             <li className="h-40">
-              <SolidButton className={cn("px-6 py-2", SFMono.className)}>
-                <a
-                  href="https://v1.iamfaisal.de/documents/faisal.pdf"
-                  target="_blank"
-                >
+              <a
+                rel="noopener"
+                href="https://v1.iamfaisal.de/documents/faisal.pdf"
+                target="_blank"
+              >
+                <SolidButton className={cn("px-6 py-2", SFMono.className)}>
                   Resume
-                </a>
-              </SolidButton>
+                </SolidButton>
+              </a>
             </li>
           </ul>
         </SheetContent>

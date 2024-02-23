@@ -7,6 +7,8 @@ const Footer = () => {
         Developed with <span className="text-green">Next Js</span> by{" "}
         <span className="text-green">Faisal Khan - </span>{" "}
         <a
+          rel="noopener"
+          aria-label="Visit github repo"
           href="https://github.com/faisaltheprofessor/portfolio-v1.git"
           target="_blank"
         >
