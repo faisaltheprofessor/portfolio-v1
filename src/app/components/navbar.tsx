@@ -16,7 +16,7 @@ const Navbar = () => {
   const navItmes = [
     { id: 1, section: "About", link: "/about", delay: 0.1 },
     { id: 2, section: "Experience", link: "/experience", delay: 0.2 },
-    { id: 3, section: "Work", link: "/work", delay: 0.3 },
+    { id: 3, section: "Projects", link: "/projects", delay: 0.3 },
     { id: 4, section: "Contact", link: "/contact", delay: 0.4 },
   ];
 

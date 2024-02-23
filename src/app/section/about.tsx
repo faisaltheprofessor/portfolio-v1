@@ -81,7 +81,7 @@ const About = () => {
             </motion.p>
 
             <motion.ul
-              className="text-slate text-[16px] mt-5 grid grid-cols-2 gap-4 w-1/2"
+              className="text-slate text-[16px] mt-5 grid grid-cols-2 gap-4 w-1/2 mb-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 3 }}
