@@ -18,7 +18,8 @@ const Footer = () => {
           />
         </a>
         <p className="mt-2">
-          Design Concept by <span className="text-green">Brittany Chiang</span>
+          Design Concept inspired by{" "}
+          <span className="text-green">Brittany Chiang's website</span>
         </p>
       </div>
     </div>

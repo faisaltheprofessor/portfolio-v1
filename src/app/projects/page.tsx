@@ -3,11 +3,13 @@ import Heading from "@/components/heading";
 import { ExternalLink, Github, Link } from "lucide-react";
 import Image from "next/image";
 import WorkCard from "../components/work-card";
+import { MacbookScroll } from "@/components/macbook-scroll";
 const Home = () => {
   return (
     <>
-      <main className="flex flex-col items-center mt-40 justify-start md:w-full  xl:w-[80%]  mx-auto min-h-screen flex-grow h-[2000px]">
-        <Heading text="What i have done" number={3} />
+      <MacbookScroll src="/work/intellecta.webp" badge="👨‍💻" />
+      <main className="flex flex-col items-center md:mt-60 justify-start md:w-full  xl:w-[80%]  mx-auto min-h-screen flex-grow h-[2000px]">
+        <Heading text="Some things i have built" number={3} />
 
         <WorkCard
           description="A comprehensive monitoring and evaluation web app theme tailored for
