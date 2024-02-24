@@ -19,7 +19,7 @@ const Footer = () => {
         </a>
         <p className="mt-2">
           Design Concept inspired by{" "}
-          <span className="text-green">Brittany Chiang's website</span>
+          <span className="text-green">Brittany Chiang&apos;s website</span>
         </p>
       </div>
     </div>
