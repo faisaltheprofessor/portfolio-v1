@@ -20,22 +20,45 @@ const Hero = () => {
       <div
         className={`flex flex-col items-start gap-y-6  text-white mx-auto -mt-20 font-medium md:px-20`}
       >
-        <p className="text-green">Hi, My name is</p>
-        <h1
+        <motion.p
+          className="text-green"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          Hi, My name is
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
           className={`${Calibre.className} text-5xl md:text-6xl lg:text-8xl text-lightest-slate font-bold tracking-wider`}
         >
           Faisal Khan.
-        </h1>
-        <h3
+        </motion.h1>
+        <motion.h3
           className={`${Calibre.className} text-4xl md:text-6xl lg:text-7xl text-slate font-medium tracking-tight`}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
         >
           I am a Software Engineer.
-        </h3>
-        <p className="text-slate tracking-tight w-2/3">
+        </motion.h3>
+        <motion.p
+          className="text-slate tracking-tight w-2/3"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           I love building web applications! Currently, I am focused on creating
           user-friendly tools using Laravel and Next.js.
-        </p>
-        <div className="h-20 w-auto">
+        </motion.p>
+        <motion.div
+          className="h-20 w-auto"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
+        >
           <div className="h-13">
             <AnimatePresence>
               {showDevelopmentText && (
@@ -67,7 +90,7 @@ const Hero = () => {
               See Previous Version
             </a>
           </SolidButton>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

@@ -30,30 +30,63 @@ const Header = () => {
 
         {/* Left Fixed Div */}
         <div className="hidden md:fixed md:flex flex-col items-center bottom-0 left-12 gap-y-10 text-light-slate">
+          <motion.div
+            className="h-32 w-[1px] bg-light-slate mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          ></motion.div>
+
           {profiles.map((profile) => (
-            <a
+            <motion.a
               key={profile.id}
               href={profile.link}
               target="_blank"
               className="hover:text-green hover:-translate-y-1 transition-all"
+              initial={{ opacity: 0, y: 2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
             >
               <profile.icon size={23} />
-            </a>
+            </motion.a>
           ))}
           {/* Border */}
-          <div className="h-20 w-[1px] bg-light-slate"></div>
+          <motion.div
+            className="h-40 w-[1px] bg-light-slate"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          ></motion.div>
         </div>
 
         {/* Left Fixed Div */}
-        <div className="hidden md:fixed md:flex flex-col items-center bottom-2 -right-9  gap-y-20">
+        <div className="hidden md:fixed md:flex flex-col items-center bottom-2 -right-9  gap-y-20 justify-evenly">
+          <motion.div
+            className="h-32 w-[1px] bg-light-slate mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          ></motion.div>
+
           <a
             href="mailto:faisal@berlin.de"
-            className="text-[13px] rotate-90 text-light-slate hover:text-green hover:-translate-y-1 transition-all tracking-widest"
+            className="text-[13px] rotate-90 text-light-slate hover:text-green hover:-translate-y-1 transition-all tracking-widest relative -bottom-5"
           >
-            faisal@berlin.de
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              faisal@berlin.de
+            </motion.span>
           </a>
           {/* Border */}
-          <div className="h-20 w-[1px] bg-light-slate mt-10"></div>
+          <motion.div
+            className="h-40 w-[1px] bg-light-slate mt-10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          ></motion.div>
         </div>
       </motion.header>
     </>
