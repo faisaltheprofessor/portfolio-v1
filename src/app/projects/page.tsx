@@ -41,7 +41,8 @@ const Home = () => {
         />
 
         <WorkCard
-          description="A blog for my friend where people can comment and react to blogs mb-20"
+          className="mb-20"
+          description="A blog for my friend where people can comment and react to blogs"
           image="/work/quranmitmir.webp"
           title="Quran mit mir"
           featureText="Featured Proejct"
