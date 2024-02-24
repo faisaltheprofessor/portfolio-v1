@@ -111,7 +111,10 @@ const Experience = () => {
             <h2 className="text-base m-3  ml-0">{experience?.dates}</h2>
             <ul className="mt-2 flex flex-col gap-y-2">
               {experience?.description.map((description) => (
-                <li className="text-base" key={Math.random()}>
+                <li
+                  className="text-base last-of-type:mb-40"
+                  key={Math.random()}
+                >
                   <span className="text-green text-2xl">▹ </span>
                   {description}
                 </li>
