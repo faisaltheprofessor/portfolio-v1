@@ -56,15 +56,15 @@ const Navbar = () => {
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <SolidButton className={cn("px-6 py-2  ml-2", SFMono.className)}>
-              <a
-                rel="noopener"
-                href="https://v1.iamfaisal.de/documents/faisal.pdf"
-                target="_blank"
-              >
+            <a
+              rel="noopener"
+              href="https://v1.iamfaisal.de/documents/faisal.pdf"
+              target="_blank"
+            >
+              <SolidButton className={cn("px-6 py-2  ml-2", SFMono.className)}>
                 Resume
-              </a>
-            </SolidButton>
+              </SolidButton>
+            </a>
           </motion.div>
         </ul>
       </motion.nav>
