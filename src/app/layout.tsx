@@ -29,6 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-navy ">
+      <link rel="manifest" href="/manifest.json" />
       <Suspense fallback={<Loading />}>
         <body className={cn("h-screen", SFMono.className)}>
           <Header />
