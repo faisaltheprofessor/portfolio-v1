@@ -36,14 +36,14 @@ const Hero = () => {
         >
           Faisal Khan.
         </motion.h1>
-        <motion.h3
+        <motion.h2
           className={`${Calibre.className} text-4xl md:text-6xl lg:text-7xl text-slate font-medium tracking-tight`}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
           I am a Software Engineer.
-        </motion.h3>
+        </motion.h2>
         <motion.p
           className="text-slate tracking-tight w-2/3"
           initial={{ opacity: 0, y: -10 }}

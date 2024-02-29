@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 6,
   userScalable: true,
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
