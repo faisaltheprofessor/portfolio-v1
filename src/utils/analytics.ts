@@ -8,6 +8,8 @@ type AnalyticsArgs = {
 
 type TrackOptions = {
     persist?: boolean
+    country?: string
+    city?: string
 }
 
 export class Analytics {
@@ -23,6 +25,16 @@ export class Analytics {
         if (!options?.persist) {
             key += `::${getDate()}`
         }
+
+        if (options?.country) {
+            key += `::${options.country}::$`
+        }
+
+
+        if (options?.city) {
+            key += `::${options.city}::$`
+        }
+
         // db to call to persist this event.
         await redis.hincrby(key, JSON.stringify(event), 1)
 
