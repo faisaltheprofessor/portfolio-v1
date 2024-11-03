@@ -1,7 +1,8 @@
 "use client";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, X } from "lucide-react";
 import Navbar from "./navbar";
 import { motion } from "framer-motion";
+import { IconBrandTwitter } from "@tabler/icons-react";
 const Header = () => {
   const profiles = [
     {
@@ -10,16 +11,16 @@ const Header = () => {
       icon: Github,
       link: "https://github.com/faisaltheprofessor",
     },
+    // {
+    //   id: 2,
+    //   name: "linkedin",
+    //   icon: Linkedin,
+    //   link: "https://www.linkedin.com/in/realfaisalkhan/",
+    // },
     {
       id: 2,
-      name: "linkedin",
-      icon: Linkedin,
-      link: "https://www.linkedin.com/in/realfaisalkhan/",
-    },
-    {
-      id: 3,
       name: "twitter",
-      icon: Twitter,
+      icon: IconBrandTwitter,
       link: "https://twitter.com/faisalfazily",
     },
   ];

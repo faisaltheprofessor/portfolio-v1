@@ -8,6 +8,20 @@ import React, { useState } from "react";
 const Experience = () => {
   let tabs = [
     {
+        name: "Current",
+        id: "current",
+        link: "",
+        position: "Infrastructure Support Specialist in Security Management and Specialist Administrator for Digital Records",
+        description: [
+            "Responsible for digital records management",
+            "Ensure server security and network security",
+            "Manage virtualization technologies",
+            "Develop tools to automate tasks and enhance work efficiency"
+        ],
+        dates: "August 2024 - Present",
+      },
+
+    {
       name: "Brainspin",
       id: "brainspin",
       link: "",
@@ -22,7 +36,7 @@ const Experience = () => {
         "Collaborating with team members in an agile environment and participating in code reviews and knowledge-sharing sessions",
         "Documenting project requirements, specifications, and technical processes using PHP documentation standards (PSR-12)",
       ],
-      dates: "November 2022 - Present",
+      dates: "November 2022 - February 22024",
     },
     {
       name: "CLAP",
