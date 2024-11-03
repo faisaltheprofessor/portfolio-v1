@@ -36,7 +36,7 @@ const Experience = () => {
         "Collaborating with team members in an agile environment and participating in code reviews and knowledge-sharing sessions",
         "Documenting project requirements, specifications, and technical processes using PHP documentation standards (PSR-12)",
       ],
-      dates: "November 2022 - February 22024",
+      dates: "November 2022 - February 2024",
     },
     {
       name: "CLAP",
