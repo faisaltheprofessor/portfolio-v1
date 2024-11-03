@@ -74,7 +74,7 @@ const Experience = () => {
       dates: "September 2017 - June 2021",
     },
   ];
-  let [selectedTab, setSelectedTab] = useState("brainspin");
+  let [selectedTab, setSelectedTab] = useState("current");
   let experience = tabs.find((tab) => tab.id === selectedTab);
   return (
     <>
