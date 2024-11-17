@@ -80,7 +80,7 @@ const Hero = () => {
             </AnimatePresence>
           </div>
 
-          <SolidButton className="mt-10 text-[13px] px-6 py-6 md:hover:border-b-8 md:hover:border-r-8 border-green transition-all md:hover:-translate-x-6  hover:-border-b-4 hover:-border-r-4 hover:translate-x-1 hover:translate-y-1">
+          {/* <SolidButton className="mt-10 text-[13px] px-6 py-6 md:hover:border-b-8 md:hover:border-r-8 border-green transition-all md:hover:-translate-x-6  hover:-border-b-4 hover:-border-r-4 hover:translate-x-1 hover:translate-y-1">
             <a
               rel="noopener"
               aria-label="Visit Previous Version"
@@ -89,7 +89,7 @@ const Hero = () => {
             >
               See Previous Version
             </a>
-          </SolidButton>
+          </SolidButton> */}
         </motion.div>
       </div>
     </motion.section>
