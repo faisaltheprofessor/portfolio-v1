@@ -7,79 +7,82 @@ import React, { useState } from "react";
 
 const Experience = () => {
   let tabs = [
-    {
-        name: "Land Berlin",
-        id: "current",
-        link: "",
-        position: "Infrastructure Support Specialist in Security Management and Specialist Administrator for Digital Records",
-        description: [
-            "Responsible for digital records management",
-            "Ensure server security",
-            "Manage virtualization technologies",
-            "Ansible automation",
-            "Maintain and monitor IT infrastructure",
-            "Provide technical support and troubleshooting",
-            "Implement security protocols and best practices",
-            "Collaborate with cross-functional teams to ensure system integrity and compliance",
-            "Stay updated with the latest industry trends and technologies in IT infrastructure and security management",
-            "Developing internal Applications"
-        ],
-        dates: "August 2024 - Present",
-      },
+  {
+    name: "Land Berlin",
+    id: "current",
+    link: "",
+    position: "Infrastructure Support Specialist in Security Management & Specialist Administrator for Digital Records",
+    description: [
+      "Manage and optimize digital records systems to ensure security, compliance, and accessibility",
+      "Maintain and monitor IT infrastructure, including data centers and virtualization technologies",
+      "Ensure server security and implement security protocols and best practices",
+      "Automate workflows and deployments using Ansible",
+      "Manage containerized environments with Kubernetes and Docker",
+      "Develop and support internal applications for operational efficiency",
+      "Provide technical support and troubleshooting for infrastructure and security-related issues",
+      "Implement and oversee emergency response and backup plans",
+      "Collaborate with cross-functional teams to safeguard system integrity and compliance",
+      "Create and maintain detailed technical documentation",
+      "Stay up to date with emerging technologies and industry trends in IT infrastructure and security"
+    ],
+    dates: "August 2024 - Present",
+  },
 
-    {
-      name: "Brainspin",
-      id: "brainspin",
-      link: "",
-      position: "Software Developer",
-      description: [
-        "Developing and maintaining responsive web applications using PHP, HTML, CSS, and JavaScript.",
-        "Building and maintaining databases to store and retrieve application data using PHP and MySQL or other database systems",
-        "Collaborating with our designer and product manager to create user-friendly and visually appealing interfaces",
-        "Implementing and integrating APIs for third-party services and systems using PHP",
-        "Troubleshooting and debugging issues, and performing regular testing to ensure optimal performance and functionality",
-        "Staying updated with emerging PHP technologies and industry trends to continuously improve development practices",
-        "Collaborating with team members in an agile environment and participating in code reviews and knowledge-sharing sessions",
-        "Documenting project requirements, specifications, and technical processes using PHP documentation standards (PSR-12)",
-      ],
-      dates: "November 2022 - February 2024",
-    },
-    {
-      name: "CLAP",
-      id: "clap",
-      link: "",
-      position: "Web Developer",
-      description: [
-        "Developed web applications using modern technologies and frameworks.",
-        "Designed and implemented databases to support application requirements.",
-        "Debugged and troubleshooted issues to ensure optimal application performance.",
-        "Deployed web applications to production environments and managed their operation.",
-        "Gathered user requirements and translated them into functional specifications.",
-        "Created prototypes and mockups to visualize application design and functionality.",
-        "Conducted thorough testing and quality assurance of developed applications.",
-        "Stayed updated with emerging trends and technologies in web development.",
-      ],
-      dates: "September 2019 - August 2021",
-    },
-    {
-      name: "AAIP",
-      id: "aaip",
-      link: "",
-      position: "Web Developer",
-      description: [
-        "Developed web applications using modern technologies and frameworks.",
-        "Designed and implemented databases to support application requirements.",
-        "Debugged and troubleshooted issues to ensure optimal application performance.",
-        "Deployed web applications to production environments and managed their operation.",
-        "Gathered user requirements and translated them into functional specifications.",
-        "Created prototypes and mockups to visualize application design and functionality.",
-        "Conducted thorough testing and quality assurance of developed applications.",
-        "Collaborated with cross-functional teams to ensure seamless integration of systems.",
-        "Stayed updated with emerging trends and technologies in web development.",
-      ],
-      dates: "September 2017 - June 2021",
-    },
-  ];
+  {
+    name: "Brainspin",
+    id: "brainspin",
+    link: "",
+    position: "Software Developer",
+    description: [
+      "Developed and maintained responsive web applications using PHP, HTML, CSS, and JavaScript",
+      "Built and optimized databases for storing and retrieving application data using MySQL and other database systems",
+      "Collaborated with designers and product managers to create user-friendly, visually appealing interfaces",
+      "Implemented and integrated APIs for third-party services and systems",
+      "Troubleshot and debugged issues, performing regular testing to ensure optimal performance and functionality",
+      "Researched and applied emerging PHP technologies and industry best practices",
+      "Collaborated in an agile environment, participating in code reviews and knowledge-sharing sessions",
+      "Documented project requirements, specifications, and technical processes following PHP standards (PSR-12)"
+    ],
+    dates: "November 2022 - February 2024",
+  },
+
+  {
+    name: "CLAP",
+    id: "clap",
+    link: "",
+    position: "Web Developer",
+    description: [
+      "Developed web applications using modern technologies and frameworks",
+      "Designed and implemented databases to support application requirements",
+      "Debugged and resolved issues to ensure optimal application performance",
+      "Deployed applications to production environments and managed ongoing operations",
+      "Gathered user requirements and translated them into functional specifications",
+      "Created prototypes and mockups to visualize application design and functionality",
+      "Conducted thorough testing and quality assurance of developed applications",
+      "Stayed up to date with emerging trends and technologies in web development"
+    ],
+    dates: "September 2019 - August 2021",
+  },
+
+  {
+    name: "AAIP",
+    id: "aaip",
+    link: "",
+    position: "Web Developer",
+    description: [
+      "Developed web applications using modern technologies and frameworks",
+      "Designed and implemented databases to support application requirements",
+      "Debugged and resolved issues to ensure optimal application performance",
+      "Deployed applications to production environments and managed ongoing operations",
+      "Gathered user requirements and translated them into functional specifications",
+      "Created prototypes and mockups to visualize application design and functionality",
+      "Conducted thorough testing and quality assurance of developed applications",
+      "Collaborated with cross-functional teams to ensure seamless integration of systems",
+      "Stayed up to date with emerging trends and technologies in web development"
+    ],
+    dates: "September 2017 - June 2021",
+  }
+];
   let [selectedTab, setSelectedTab] = useState("current");
   let experience = tabs.find((tab) => tab.id === selectedTab);
   return (
