@@ -8,15 +8,21 @@ import React, { useState } from "react";
 const Experience = () => {
   let tabs = [
     {
-        name: "Current",
+        name: "Land Berlin",
         id: "current",
         link: "",
         position: "Infrastructure Support Specialist in Security Management and Specialist Administrator for Digital Records",
         description: [
             "Responsible for digital records management",
-            "Ensure server security and network security",
+            "Ensure server security",
             "Manage virtualization technologies",
-            "Develop tools to automate tasks and enhance work efficiency"
+            "Ansible automation",
+            "Maintain and monitor IT infrastructure",
+            "Provide technical support and troubleshooting",
+            "Implement security protocols and best practices",
+            "Collaborate with cross-functional teams to ensure system integrity and compliance",
+            "Stay updated with the latest industry trends and technologies in IT infrastructure and security management",
+            "Developing internal Applications"
         ],
         dates: "August 2024 - Present",
       },
